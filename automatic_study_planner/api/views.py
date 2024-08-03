@@ -1,7 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-
-from automatic_study_planner.api.serializers import StudentInfoSerializer
+from serializers import StudentInfoSerializer
 
 
 @api_view(['POST'])
@@ -15,3 +14,8 @@ def create_study_form(request):
 
 def generate_table(item):
     pass
+
+
+# @api_view(['POST'])
+# def update_progress(request):
+#     data = request.data

@@ -7,9 +7,10 @@ from django.contrib.auth.models import User
 
 class StudentInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    no_of_subjects = models.CharField(max_length=255)
-    no_of_days = models.IntegerField()
-    no_of_hours = models.IntegerField()
+    no_of_subjects = models.CharField(max_length=255, null=False)
+    no_of_days = models.IntegerField(null=False)
+    no_of_hours = models.IntegerField(null=False)
+    progress = models.IntegerField(default=0)
 
 
 class SubjectInfo(models.Model):
