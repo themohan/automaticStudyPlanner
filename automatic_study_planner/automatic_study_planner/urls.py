@@ -18,4 +18,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('studyPlan/', CreateStudyPlan.as_view(), name='CreateStudyPlan')
 ]
